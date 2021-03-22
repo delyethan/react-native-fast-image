@@ -5,6 +5,10 @@ import FastImage from './index'
 
 const style = StyleSheet.create({ image: { width: 44, height: 44 } })
 
+jest.mock(
+    '../node_modules/react-native/Libraries/EventEmitter/NativeEventEmitter',
+)
+
 test('FastImage renders correctly.', () => {
     const tree = renderer
         .create(

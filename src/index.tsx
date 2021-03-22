@@ -225,7 +225,11 @@ FastImage.cacheControl = cacheControl
 
 FastImage.priority = priority
 
-FastImage.preload = (sources: Source[], onProgress?: PreloadProgressHandler, onComplete?: PreloadCompletionHandler) => {
+FastImage.preload = (
+    sources: Source[],
+    onProgress?: PreloadProgressHandler,
+    onComplete?: PreloadCompletionHandler,
+) => {
     preloaderManager.preload(sources, onProgress, onComplete)
 }
 
