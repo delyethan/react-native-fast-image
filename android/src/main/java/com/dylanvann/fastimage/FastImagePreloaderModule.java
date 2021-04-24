@@ -18,6 +18,7 @@ import com.facebook.react.bridge.ReadableArray;
 import com.facebook.react.bridge.ReadableMap;
 import com.facebook.react.views.imagehelper.ImageSource;
 import java.io.File;
+
 class FastImagePreloaderModule extends ReactContextBaseJavaModule {
 
     private static final String REACT_CLASS = "FastImagePreloaderManager";
