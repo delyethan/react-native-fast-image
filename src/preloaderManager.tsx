@@ -46,6 +46,10 @@ class PreloaderManager {
             this._subComplete.remove()
         }
     }
+
+    getCachePath = (source: any) => {
+        return nativeManager.getCachePath(source)
+    }
 }
 
 const preloaderManager = new PreloaderManager()

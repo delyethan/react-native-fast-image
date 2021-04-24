@@ -54,6 +54,7 @@ and
 -   [x] Preload images.
 -   [x] GIF support.
 -   [x] Border radius.
+-   [x] Get image path from cache.
 
 ## Usage
 
@@ -215,6 +216,14 @@ FastImage.preload(
   (urls, finished, total) => console.log(`Preloaded ${finished}/${total} images: ${urls}`),
   (urls, finished, skipped) => console.log(`Completed. Failed to load ${skipped}/${finished} images: ${urls}`),
 )
+```
+
+### `FastImage.getCachePath: (source) => void`
+
+Get image path from cache by `source`
+
+```js
+FastImage.getCachePath({ uri: 'https://facebook.github.io/react/img/logo_og.png' })
 ```
 
 ## Troubleshooting

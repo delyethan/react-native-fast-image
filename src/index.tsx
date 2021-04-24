@@ -214,6 +214,7 @@ interface FastImageStaticProperties {
         onProgress?: PreloadProgressHandler,
         onComplete?: PreloadCompletionHandler,
     ): void
+    getCachePath: (source: Source) => Promise<string>
 }
 
 const FastImage: React.ComponentType<FastImageProps> &
@@ -232,6 +233,9 @@ FastImage.preload = (
 ) => {
     preloaderManager.preload(sources, onProgress, onComplete)
 }
+
+FastImage.getCachePath = (source: Source) =>
+    preloaderManager.getCachePath(source)
 
 const styles = StyleSheet.create({
     imageContainer: {
