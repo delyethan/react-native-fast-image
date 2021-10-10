@@ -8,3 +8,7 @@
 #   http://developer.android.com/guide/developing/tools/proguard.html
 
 # Add any project specific keep options here:
+
+-keep public class com.bumptech.glide.integration.webp.WebpImage { *; }
+-keep public class com.bumptech.glide.integration.webp.WebpFrame { *; }
+-keep public class com.bumptech.glide.integration.webp.WebpBitmapFactory { *; }
